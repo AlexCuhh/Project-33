@@ -1,0 +1,193 @@
+/* Reset + base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn--gold {
+  background: linear-gradient(90deg, #f5b800, #d1a200);
+  color: #000;
+  border: none;
+}
+
+.btn--gold:hover {
+  background: linear-gradient(90deg, #ffd84f, #e6b800);
+}
+
+.btn--ghost {
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+}
+
+.btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn--sm {
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+}
+
+.btn--full {
+  width: 100%;
+}
+
+/* Tint utility */
+.tint {
+  color: #f5b800;
+}
+
+/* ---------- Base Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #e7eef5;
+  background: #0b1620; /* page bg under hero edges */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Links */
+a { color: inherit; text-decoration: none; }
+a:hover { opacity: .9; }
+
+/* Media */
+img, video { display: block; max-width: 100%; }
+
+/* Container (match HTML version width) */
+.container {
+  width: min(1200px, 92vw);
+  margin-inline: auto;
+}
+
+/* Headings */
+h1,h2,h3 { line-height: 1.15; letter-spacing: .2px; }
+
+/* Utility */
+.section { padding: 72px 0; }
+.hide { display: none !important; }
+
+/* Color tokens to match your HTML build */
+:root{
+  --nav-bg: #0d1b2a;
+  --nav-bg-2: #0f2232;
+  --hero-dim: rgba(6,14,23,.55);
+  --panel: rgba(255,255,255,.08);
+  --panel-2: rgba(255,255,255,.12);
+  --ink: #e9f1f8;
+  --muted: #c6d1db;
+  --gold-1: #ffd86f;
+  --gold-2: #d6a532;
+  --gold-deep: #c99511;
+  --outline: rgba(255,255,255,.18);
+  --shadow: 0 20px 60px rgba(0,0,0,.45);
+  --radius-xl: 18px;
+  --radius-lg: 14px;
+  --radius-md: 10px;
+}
+
+/* Buttons (shared) */
+.btn {
+  appearance: none;
+  border: 0;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+}
+.btn:active { transform: translateY(1px); }
+
+/* Gold button like original site */
+.btn--gold {
+  color: #0b0f14;
+  background: linear-gradient(135deg, var(--gold-1), var(--gold-2));
+  box-shadow: 0 8px 20px rgba(214,165,50,.35);
+}
+.btn--gold:hover { box-shadow: 0 10px 26px rgba(214,165,50,.45); }
+
+/* Ghost button */
+.btn--ghost {
+  color: var(--ink);
+  background: transparent;
+  border: 1.5px solid var(--outline);
+  backdrop-filter: blur(8px);
+}
+.btn--ghost:hover { background: rgba(255,255,255,.08); }
+
+/* Chip / badge */
+.badge {
+  font-size: .95rem;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--panel);
+  border: 1px solid var(--outline);
+}
+
+/* Inputs (shared) */
+.input {
+  width: 100%;
+  background: rgba(13,27,42,.55);
+  border: 1px solid var(--outline);
+  color: var(--ink);
+  padding: 12px 14px;
+  border-radius: 10px;
+  outline: none;
+}
+.input::placeholder { color: rgba(231,238,245,.7); }
