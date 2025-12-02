@@ -14,13 +14,14 @@ export default function Navbar() {
         <nav className="nav">
           <Link to="/" className="nav__link">Home</Link>
           <Link to="/full-fleet" className="nav__link">Our Fleet</Link>
-          <a className="nav__link" href="#services">Services</a>
-          <a className="nav__link" href="#about">About</a>
+          {/* <a className="nav__link" href="#services">Services</a> */}
+          {/* <a className="nav__link" href="#about">About</a> */}
           <Link to="/contact" className="nav__link">Contact</Link>
         </nav>
 
         <div className="topbar__cta">
-          <a className="btn btn--gold btn--sm" href="#booking">Book Now</a>
+          <Link to="/quotes" className="btn btn--gold btn--sm">Book Now</Link>
+          {/* <a className="btn btn--gold btn--sm" href="#booking">Book Now</a> */}
         </div>
       </div>
     </header>
