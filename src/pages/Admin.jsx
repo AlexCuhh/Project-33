@@ -1,6 +1,6 @@
-// src/pages/Admin.jsx
-import { useMemo, useState } from "react";
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 const recentQuotes = [
   { id: "Q-1024", route: "AUS → DFW", jet: "Citation CJ3+", date: "2025-12-01", status: "New" },
@@ -12,6 +12,16 @@ export default function Admin() {
   const totalQuotes = recentQuotes.length;
   const newToday = 1;
   const pending = recentQuotes.filter(q => q.status === "Pending").length;
+
+  const navigate = useNavigate();
+  
+  useEffect(() => {
+    const isEmployee = localStorage.getItem("isEmployee") === "true";
+    if (!isEmployee) {
+      navigate("/login");
+    }
+  }, [navigate]);
+
 
   return (
     <main className="admin" style={{ minHeight: "100vh", background: "radial-gradient(circle at top, #182533 0, #050a10 55%)" }}>
@@ -125,9 +135,9 @@ export default function Admin() {
                 ))}
               </tbody>
             </table>
-            <p style={{ marginTop: "8px", fontSize: "0.8rem", color: "#768799" }}>
+            {/* <p style={{ marginTop: "8px", fontSize: "0.8rem", color: "#768799" }}>
               * Demo data only – wired to real database in a future sprint.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>

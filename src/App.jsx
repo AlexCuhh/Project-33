@@ -7,6 +7,8 @@ import Quotes from "./pages/Quotes.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Admin from "./pages/Admin.jsx";
+import Login from "./pages/Login.jsx";
+
 
 
 export default function App() {
@@ -20,6 +22,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/quotes" element={<Quotes />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </>

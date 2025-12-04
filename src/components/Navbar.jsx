@@ -17,6 +17,7 @@ export default function Navbar() {
           {/* <a className="nav__link" href="#services">Services</a> */}
           {/* <a className="nav__link" href="#about">About</a> */}
           <Link to="/contact" className="nav__link">Contact</Link>
+          <Link to="/login" className="nav__link nav__link--muted">Log In</Link>
         </nav>
 
         <div className="topbar__cta">
